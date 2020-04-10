@@ -1,5 +1,6 @@
 const express = require('express');
 const projDb = require("./helpers/projectModel");
+const actionDb = require("./helpers/actionModel");
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -29,6 +30,15 @@ router.post('/',validateProject,(req,res)=>{
       })
 })
 
+router.post('/:id/action',validateProjectId, validateAction,(req,res)=>{
+    actionDb.insert({project_id:req.params.id,...req.body}).then(nProj=>{
+        res.status(201).json(nProj)
+    }).catch(err=>{
+        console.log(err);
+        res.status(500).json({message:"Error creating project"});
+    })
+})
+
 router.delete('/:id',validateProjectId, (req, res) => {
   projDb.remove(req.params.id).then(count=>{
     res.status(201).json({message:"Succesfully removed project"})
@@ -50,7 +60,6 @@ router.put('/:id',validateProjectId, validateProject, (req, res) => {
 });
 
 // custom middleware
-
 function validateProjectId(req, res, next) {
   // do your magic!
   projDb.get(req.params.id).then(post=>{
@@ -67,5 +76,14 @@ function validateProject(req, res, next) {
       next();
       // do your magic!
 }
+function validateAction(req, res, next) {
+    if(!req.body){
+        res.status(400).json({message:"missing post data"});
+      }
+      if(!req.body.description||!req.body.notes){
+        res.status(400).json({message:"Please provide both notes and description"})
+      }
+      next();
+  }
 
 module.exports = router;
