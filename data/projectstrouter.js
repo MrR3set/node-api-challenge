@@ -35,7 +35,7 @@ router.post('/:id/action',validateProjectId, validateAction,(req,res)=>{
         res.status(201).json(nProj)
     }).catch(err=>{
         console.log(err);
-        res.status(500).json({message:"Error creating project"});
+        res.status(500).json({message:"Error creating action"});
     })
 })
 
