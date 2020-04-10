@@ -17,8 +17,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Route exact path="/"><ProjectsPage data={data}></ProjectsPage></Route>
-        <Route exact path="/:id"><Project></Project></Route>
+        <div className="ProjectsPage-wrapper">
+          <Route exact path="/"><ProjectsPage data={data}></ProjectsPage></Route>
+          <Route exact path="/:id"><Project></Project></Route>
+        </div>
 
       </div>
     </Router>

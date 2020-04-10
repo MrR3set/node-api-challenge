@@ -38,7 +38,7 @@ function ProjectsPage() {
             <div className="Actions">
                 {proj.actions.map(action=>{
                     return <div>
-                        <p>{action.description}</p>
+                        <h2>{action.description}</h2>
                         <p>{action.notes}</p>
                     </div>
                 })}

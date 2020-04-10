@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 function ProjectsPage(props) {
 
     return (
-    <div className="ProjectsPage-wrapper">
+    <>
         {props.data.map(project=>{
             return(
             <div className="Project-wrapper" key={project.id} onClick={()=>props.history.push(`/${project.id}`)}>                
@@ -15,7 +15,7 @@ function ProjectsPage(props) {
             </div>
             )
         })}
-    </div>
+    </>
     );
 }
 
