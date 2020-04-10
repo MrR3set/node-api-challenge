@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+body{
+  background-image: linear-gradient(302deg, rgba(91, 0, 57, 0.5) 0%, rgba(91, 0, 57, 0.5) 14.286%,rgba(118, 8, 52, 0.5) 14.286%, rgba(118, 8, 52, 0.5) 28.572%,rgba(145, 17, 47, 0.5) 28.572%, rgba(145, 17, 47, 0.5) 42.858%,rgba(172, 25, 42, 0.5) 42.858%, rgba(172, 25, 42, 0.5) 57.144%,rgba(198, 33, 37, 0.5) 57.144%, rgba(198, 33, 37, 0.5) 71.43%,rgba(225, 42, 32, 0.5) 71.43%, rgba(225, 42, 32, 0.5) 85.716%,rgba(252, 50, 27, 0.5) 85.716%, rgba(252, 50, 27, 0.5) 100.002%),linear-gradient(62deg, rgb(34, 92, 111) 0%, rgb(34, 92, 111) 14.286%,rgb(69, 109, 94) 14.286%, rgb(69, 109, 94) 28.572%,rgb(105, 126, 78) 28.572%, rgb(105, 126, 78) 42.858%,rgb(140, 144, 61) 42.858%, rgb(140, 144, 61) 57.144%,rgb(175, 161, 44) 57.144%, rgb(175, 161, 44) 71.43%,rgb(211, 178, 28) 71.43%, rgb(211, 178, 28) 85.716%,rgb(246, 195, 11) 85.716%, rgb(246, 195, 11) 100.002%);
+}
+
+.App{
+ display: flex;
+ flex-wrap: nowrap;
+ justify-content: center;
+ height: 100vh;
+}
+
+.ProjectsPage-wrapper{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  width: 80%;
+  padding: 1% 2%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.250);
+  background-color: rgba(0, 0, 0, 0.5);
+}
